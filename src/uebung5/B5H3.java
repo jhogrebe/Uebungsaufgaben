@@ -7,7 +7,7 @@ public class B5H3 {
 
 		int einheiten[][] = {{50000, 20000, 10000, 5000, 2000, 1000, 500, 200, 100, 50, 20, 10, 5, 2, 1}, 
 	             {    0,     0,     0,    0,    0,    0,   0,   0,   0,  0,  0,  0, 0, 0, 0}};
-int input = 1499900; //Geldbetrag in Cent
+int input = 31323; //Geldbetrag in Cent
 int temp = input; // um input nicht zu verändern
 
 for (int i = 0; i < 15; i++) {
@@ -40,6 +40,12 @@ if (input%500 != 0) { //selbe wie bei scheinen, jetzt bei münzen
 } else {
 	System.out.println("Keine Münzen benötigt.");
 }
+System.out.println();
+int anzahl = 0;
+for (int i = 0; i < einheiten[1].length; i++) {
+	anzahl += einheiten[1][i];
+}
+System.out.println("Insgesamt werden also mindestens " + anzahl + " Geldstuecke benötigt.");
 
 	}
 
